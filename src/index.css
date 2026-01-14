@@ -17,4 +17,14 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'helvetica', sans-serif;
+  background-color: #080808;
+  color: white;
+}
+
+.helvetica-bold {
+  font-family: 'helvetica-bold', sans-serif;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
 }
