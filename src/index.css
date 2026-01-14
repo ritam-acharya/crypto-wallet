@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "helvetica";
+  src: url("/helvetica-255-webfont/Helvetica.woff");
+}
+
+@font-face {
+  font-family: "helvetica-bold";
+  src: url("/helvetica-255-webfont/Helvetica-Bold.woff");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'helvetica', sans-serif;
+}
