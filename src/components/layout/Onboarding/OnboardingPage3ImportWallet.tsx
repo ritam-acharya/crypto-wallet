@@ -1,6 +1,7 @@
 
-import {  useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useAccount from "../../../context/AccountContext";
 
 
 export default function OnboardingPage3ImportWallet() {
@@ -8,6 +9,7 @@ export default function OnboardingPage3ImportWallet() {
     const [mnemonic] = useState<number[]>([1,2,3,4,5,6,7,8,9,10,11,12]);
     const [inputs, setInputs] = useState<string[]>(Array(12).fill(""));
     const navigate = useNavigate();
+    const { setMnemonic } = useAccount()!;
 
     return <div className=" w-full h-full ">
         <div className="h-full w-full flex flex-col items-center justify-between py-3 px-2 ">
@@ -31,7 +33,11 @@ export default function OnboardingPage3ImportWallet() {
             <div className="h-auto w-full self-end mt-auto ">
                 <div 
                 onClick={() => {
-                    navigate("/")
+                    setMnemonic(inputs.join(" ").trim());
+                    localStorage.setItem("active", true.toString());
+                    localStorage.setItem("cryptoWalletUser", true.toString());
+                    console.log(inputs.join(" ").trim());
+                    navigate("/");
                 }}
                 className={`w-full h-auto px-4 py-4 rounded-lg bg-[#AB9FF2] text-black cursor-pointer flex items-center justify-center `}>
                     Continue

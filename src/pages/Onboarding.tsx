@@ -1,9 +1,9 @@
 
 import { useState } from "react";
-import OnboardingPage3ImportWallet from "../components/layout/OnboardingPage3ImportWallet";
-import OnboardingPage1 from "../components/layout/OnboardingPage1";
-import OnboardingPage2 from "../components/layout/OnboardingPage2";
-import OnboardingPage3 from "../components/layout/OnboardingPage3";
+import OnboardingPage3ImportWallet from "../components/layout/Onboarding/OnboardingPage3ImportWallet";
+import OnboardingPage1 from "../components/layout/Onboarding/OnboardingPage1";
+import OnboardingPage2 from "../components/layout/Onboarding/OnboardingPage2";
+import OnboardingPage3 from "../components/layout/Onboarding/OnboardingPage3";
 
 
 export default function Onboarding() {
